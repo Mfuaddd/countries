@@ -4,11 +4,14 @@
     --bg-first-color:#fafafa;
     --bg-second-color:#ffffff;
     --text-first-color:#111517;
+    --opacity: 1;
 }
 .dark{
     --bg-first-color:#202c36;
     --bg-second-color:#2b3844;
     --text-first-color:#ffffff;
+    --opacity: 0.85;
+    background-color: var(--bg-first-color);
 }
 
 * {
@@ -17,9 +20,28 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    transition: all 300ms ease;
 }
   
 img {
     display: block;
     max-width: 100%;
+}
+
+.country-info-left{
+    color: var(--text-first-color);
+    font-family: Nunito Sans;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 32px;
+    font-weight: 600;
+}
+.country-info-right{
+    color: var(--text-first-color);
+    font-family: Nunito Sans;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 32px;
+    font-weight: 300;
+    padding-left: 5px;
 }

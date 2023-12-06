@@ -1,13 +1,16 @@
-import React from "react";
-import "./index.scss"
+import React, { useEffect } from "react";
+import "./index.scss";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 function Header() {
+  const [theme, setTheme] = useLocalStorage("theme", true);
 
-    function changeTheme() {
-        document.body.classList.toggle("dark")
-      }
+  useEffect(() => {
+    if (theme) document.body.classList.remove("dark");
+    else document.body.classList.add("dark");
+  }, [theme]);
 
   return (
     <>
@@ -16,9 +19,9 @@ function Header() {
           <div className="header__left">
             <h1>Where in the world?</h1>
           </div>
-          <div onClick={()=>changeTheme()} className="header__right">
+          <div onClick={() => setTheme(!theme)} className="header__right">
             <FontAwesomeIcon icon="fa-solids fa-moon" />
-            <span>Dark Mode</span>
+            <span>{theme ? "Dark" : "Light"} Mode</span>
           </div>
         </div>
       </header>

@@ -1,8 +1,9 @@
 // font-family: 'Nunito', sans-serif;
 .header {
     background: var(--bg-second-color);
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
     height: 80px;
+    box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+
     &__container {
         max-width: 1280px;
         margin: auto;   
@@ -30,6 +31,9 @@
         align-items: center;
         justify-content: center;
         gap: 8px;
+        user-select: none;
+        cursor: pointer;
+
         svg{
             width: 20px;
             height: 20px;
