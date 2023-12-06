@@ -48,7 +48,7 @@ function DetailSection() {
                   <li>
                     <span className="country-info-left">Population:</span>
                     <span className="country-info-right">
-                      {dataApi.population.toLocaleString('en -US')}
+                      {dataApi.population.toLocaleString('en-US')}
                     </span>
                   </li>
                   <li>
